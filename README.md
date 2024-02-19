@@ -10,4 +10,4 @@ This is a simple chatbot frontend implementation using plain HTML, CSS, and Java
 
 ## Screenshots
 
-![Chatbot Screenshot](screenshots/chatbot-screenshot.png)
+![Chatbot Screenshot](screenshots/c1.png)
