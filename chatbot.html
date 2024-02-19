@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatbot_style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Chatbot</title>
+</head>
+<body>
+    
+    <div id="chat-circle" onclick="OpenChatbot(event)">
+
+    </div>
+
+    <div id="chatbot" class="minimized">
+
+            <div id="settings-menu">
+                <div class="chat-button">
+                    Option 1
+                </div>
+                <div class="chat-button">
+                    Option 2
+                </div>
+                <div class="chat-button">
+                    Option 3
+                </div>
+            </div>
+
+            <div id="chat-head">
+
+                <div id="options-logo">
+                    <span style="font-size: 40px;" id="settings-button" onclick="setStateOfSettingsMenu()" class="material-symbols-outlined">
+                        settings
+                        </span>
+
+                        
+                    <div id="logo">
+
+                    </div>
+                </div>
+
+
+                <div id="close-minimize-icons">
+                    <span class="material-symbols-outlined" onclick="MinimizeChat(event)" >
+                        minimize
+                        </span>
+                    <span class="material-symbols-outlined" onclick="CloseChat(event)">
+                        close
+                        </span>
+                </div>
+
+            </div>
+
+            <div id="chat-body">
+                <div class="message user-message">
+                    Hi, My name is Mubashir
+                </div>
+
+                <div class="message bot-message">
+                    Hi Mubashir!
+                </div>
+                <div class="message user-message">
+                    Hi, My name is Mubashir
+                </div>
+
+                <div class="message bot-message">
+                    Hi Mubashir!
+                </div>
+                
+                
+            </div>
+        
+            <div id="buttons-bar">
+                <div id="quick-replies-heading">Quick Replies</div>
+
+                <div id="quick-replies">
+                    <div class="quick-reply">
+                        Yes
+                    </div>
+                    <div class="quick-reply">
+                        No
+                    </div>
+                    <div class="quick-reply">
+                        Not sure
+                    </div>
+                    <div class="quick-reply">
+                        Go Back
+                    </div>
+                </div>
+                
+
+            </div>
+    
+            <div id="chat-foot">
+
+                <textarea id="chat-input" type="text" onkeyup="ChatInput(event)" onkeydown="ChatInputEnterKey(event)" > </textarea>
+                <span id="chat-input-submit" class="material-symbols-outlined invisible">
+                    arrow_back
+                    </span>
+            </div>
+
+            <div id="dialog-box">
+                <div id="dialog-top-bar">
+                    <span  class="material-symbols-outlined" onclick="CloseDialog(event)">
+                        close
+                        </span>
+                </div>
+                <h1 align="center">Close Chat?</h1>
+            </div>
+       
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
