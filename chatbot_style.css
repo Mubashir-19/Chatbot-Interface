@@ -7,13 +7,12 @@
     right: 100px;
     border-radius: 10px 10px 0 10px;
     transition: 0.5s ease;
+
     visibility: visible;
-    opacity: 1;
+    /* opacity: 1; */
     overflow: hidden;
     /* z-index: 0; */
 }
-
-
 
 
 
@@ -21,7 +20,7 @@
     height: 0;
     width: 0;
     visibility: hidden;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 :root {
@@ -32,6 +31,10 @@
   }
 body{
     background-color: rgb(245, 245, 245);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    box-sizing: border-box;
     /* background-image: linear-gradient(to bottom, rgb(255 255 0 / 50%),
     rgb(0 0 255 / 50%)); */
 }
@@ -43,7 +46,7 @@ body{
 } */
 
 #chat-head{
-    height: 70px;
+    height: 10%;
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
@@ -86,10 +89,9 @@ body{
 }
 
 #buttons-bar {
-    height: auto;
+    height: 15%;
     width: 100%;
-    position: absolute;
-    bottom: 80px;
+    box-sizing: border-box;
     
     padding: 5px;
     
@@ -116,7 +118,7 @@ body{
 }
 
 #quick-replies {
-
+    
     display: flex;
     align-items: center;
 }
@@ -124,16 +126,28 @@ body{
 .temp-message {
     padding: 10px;
     margin: 40px 0 10px 0;
-    font-size: 20px;
+    
+    /* width: 10%; */
+    width: 65%;
+    opacity: 0;
     visibility: hidden;
     transition: 0.2s ease;
 }
+
+#last-message {
+    float: left;
+    height: 22.4;
+}
+#last-message2 {
+    float: right;
+    height: 22.4;
+}
+
 #chat-foot{
-    height: 80px;
+    height: 10%;
     width: 100%;
     background-color: rgb(109, 154, 209);
-    position: absolute;
-    bottom: 0;
+    position: relative;
     border-radius: 0 0 0 10px;
     display: flex;
     justify-content: center;
@@ -159,21 +173,25 @@ body{
 .message {
     padding: 10px;
     margin: 10px 0 10px 0;
-    font-size: 20px;
+    opacity: 1;
     width: 65%;
     visibility: visible;
+    /* overflow: hidden; */
+    word-wrap: break-word;
     transition: 0.2s ease;
     
 }
 
-#chat-body {
-    padding: 10px 5%;
-    height: calc(90vh - 260px);
-    overflow: scroll;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
+
+#chat-body {
+   box-sizing: border-box;
+    height: 65%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px 5% 30px 5%;
+
+}
 
 
 #chat-input {
@@ -199,7 +217,7 @@ body{
 #chat-input-submit {
     font-size: 30px;
     position: absolute;
-    top: 25px;
+    top: calc(50% - 15px);
     right: 40px;
     display: block;
     transform: scaleX(-1);
@@ -294,6 +312,7 @@ body{
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
+    
     border-radius: 0 5px 5px 5px;
     transition: 0.4s ease;
 }
@@ -317,4 +336,21 @@ body{
 #chat-circle.invisible {
     visibility: hidden;
     opacity: 0;
+}
+
+
+@media screen and (max-height: 1000px) and (max-width: 500px) {
+
+    #chatbot {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        
+    }
+
+    #chatbot.minimized {
+        height: 0;
+    }
 }
